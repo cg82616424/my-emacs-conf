@@ -13,8 +13,9 @@
 (add-hook 'python-mode-hook '(lambda () (company-mode)))
 ;;company mode conf
 ;;python mode jedi company conf
-;;(defun my/python-mode-hook ()
-;;  (add-to-list 'company-backends 'company-jedi))
-;;(add-hook 'python-mode-hook 'my/python-mode-hook)
+(defun run-python-once ()
+  (remove-hook 'python-mode-hook 'run-python-once)
+  (run-python))
 
-
+(add-hook 'python-mode-hook 'run-python-once)
+;;auto run a python process in python mode
