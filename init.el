@@ -1,3 +1,4 @@
+(load-theme 'wheatgrass)
 (add-to-list 'load-path
               "~/.emacs.d/plugins/yasnippet")
 (add-to-list 'load-path
